@@ -1,0 +1,34 @@
+{
+  "name": "Python Course Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "nomades_python_env",
+  "workspaceFolder": "/home/student/workspace",
+  "remoteEnv": { "BASH_ENV": "/etc/profile" },
+  "postCreateCommand": "echo 'cd ppl_2025_1012' >> ~/.bashrc",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",  // Docker Integration
+        "ms-python.python",             // Python
+        "ms-toolsai.jupyter",           // Jupyter
+        "mechatroner.rainbow-csv",      // Rainbow CSV
+        "ms-vscode-remote.remote-wsl",  // Remote - WSL
+        "lfm.vscode-makefile-term",      // Makefile Run Tools
+        "samuelcolvin.jinjahtml"        // Jinja
+      ],
+      "settings": {
+        "python.testing.unittestArgs": [
+          "-v",
+          "-s",
+          "./python",
+          "-p",
+          "test_*.py"
+        ],
+        "python.testing.pytestEnabled": false,
+        "python.testing.unittestEnabled": true,
+        "markdown.validate.enabled": true,
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
