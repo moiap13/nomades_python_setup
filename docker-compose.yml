@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  nomades_python_env:
+    image: moiap13/nomades_python_env:latest
+    container_name: nomades_python_env
+    env_file:
+      - .env
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ${WORKSPACE_PATH}:/home/student/workspace
+      - ${SSH_KEYS_PATH}:/home/student/.ssh
+    tty: true
+    stdin_open: true
