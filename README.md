@@ -77,3 +77,31 @@ This container gives you a ready-to-use Python workspace identical for macOS, Li
    xhost +127.0.0.1
    ```
 
+#### Windows
+
+1. Install [VcXsrv](https://vcxsrv.com/):
+   1. Download the installer from the link above, clicking on `Free Download`.
+   2. Run the installer and follow the prompts to complete the installation.
+
+2. Start VcXsrv:
+   1. Open the Start Menu and search for "VcXsrv".
+      > **Know Issue:** If you encounter issues with VcXsrv (screen doesn't start)
+      > - Launch `XLaunch` from the Start Menu instead.
+      > - Select `multiple windows` and set the `dsiplay number` to `0`.
+      > - On extra settings window, check ✅ `Disable access control`.
+      > - Finish the setup and relaucnh `VcXsrv` if needed.
+
+3. Allow docker access to VcXsrv:
+   1. open powershel terminal and run the following command:
+   ```powershell
+   xhost +
+   ```
+
+#### Linux
+
+1. Make sure you have an X11 server running (most Linux distributions do by default).
+2. Allow docker access to X11 server:
+   1. Run the following command in a terminal:
+   ```bash
+   xhost +local:docker
+   ```
