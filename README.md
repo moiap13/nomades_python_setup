@@ -7,6 +7,12 @@ This container gives you a ready-to-use Python workspace identical for macOS, Li
 
 ## 🚀 Setup Steps
 
+### 0️⃣ Prerequisites
+
+- [Docker](https://www.docker.com/) installed and running on your machine.
+- [VSCode](https://code.visualstudio.com/) installed 
+- A GitHub account.
+
 ### 1️⃣ Create a GitHub PAT (Personal Access Token)
 
 1. Go to [GitHub → Settings → Developer settings → Tokens (classic)](https://github.com/settings/tokens).

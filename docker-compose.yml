@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   nomades_python_env:
-    image: moiap13/nomades_python_env:latest
+    image: moiap13/nomades_python_env:0.0.2
     container_name: nomades_python_env
     env_file:
       - .env
